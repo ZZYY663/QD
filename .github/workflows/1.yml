@@ -1,4 +1,4 @@
-name: dsj
+name: 趣星球
 on:
   workflow_dispatch:
   schedule:
