@@ -1,8 +1,8 @@
-name: dsj
+name: 书旗
 on:
   workflow_dispatch:
   schedule:
-    - cron: '3 0-14/1 * * *'
+    - cron: '30 0-23/12 * * *'
 jobs:
   build:
     runs-on: macos-latest
@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/caixukun112/js.git ~/js             
+          git clone https://github.com/caixukun112/js.git ~/js
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -22,12 +22,8 @@ jobs:
           npm install cron
           npm install request
           curl ipinfo.io/json
-
-      - name: '【dsj】'
+      - name: '【书旗小说】'
         run: |
-          cd ~/js   
+          cd ~/js/Task   
           node s.js
-        env:
-          ENCRYPT_KEY: ${{ secrets.ENCRYPT_KEY }}
- 
-
+  
