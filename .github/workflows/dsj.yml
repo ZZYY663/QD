@@ -26,7 +26,7 @@ jobs:
       - name: '【dsj】'
         run: |
           cd ~/js   
-          node dsj.js
+          node s.js
         env:
           ENCRYPT_KEY: ${{ secrets.ENCRYPT_KEY }}
  
